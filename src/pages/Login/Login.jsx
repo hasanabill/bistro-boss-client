@@ -80,11 +80,12 @@ const Login = () => {
                                 <label className="label">
                                     <LoadCanvasTemplate />
                                 </label>
-                                <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="Captcha" className="input input-bordered" required />
+                                <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="Captcha" className="input input-bordered" />
 
                             </div>
                             <div className="form-control mt-6">
-                                <input disabled={disabled} type="submit" value="Sign In" className="btn text-white bg-opacity-70 bg-[#D1A054]" />
+                                {/* TODO: disabled recaptcha */}
+                                <input disabled={false} type="submit" value="Sign In" className="btn text-white bg-opacity-70 bg-[#D1A054]" />
                             </div>
                         </form>
                         <p className='text-center mb-3'>New Here? <Link className='text-blue-400' to="/signup">Create an account</Link></p>
